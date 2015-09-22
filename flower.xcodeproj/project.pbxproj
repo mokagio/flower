@@ -14,6 +14,7 @@
 		3F202EE01BB16EFE00FD1C17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F202EDE1BB16EFE00FD1C17 /* LaunchScreen.storyboard */; };
 		3F202EEE1BB16F5900FD1C17 /* tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F202EED1BB16F5900FD1C17 /* tests.swift */; };
 		3F202EFC1BB16F7800FD1C17 /* ui_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F202EFB1BB16F7800FD1C17 /* ui_tests.swift */; };
+		3F202F051BB178CE00FD1C17 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F202F041BB178CE00FD1C17 /* DropboxSDK.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3F202EF91BB16F7800FD1C17 /* ui-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ui-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F202EFB1BB16F7800FD1C17 /* ui_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ui_tests.swift; sourceTree = "<group>"; };
 		3F202EFD1BB16F7800FD1C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F202F041BB178CE00FD1C17 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F202F051BB178CE00FD1C17 /* DropboxSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		3F202EC91BB16EFE00FD1C17 = {
 			isa = PBXGroup;
 			children = (
+				3F202F031BB178A100FD1C17 /* Frameworks */,
 				3F202ED41BB16EFE00FD1C17 /* flower */,
 				3F202EEC1BB16F5900FD1C17 /* tests */,
 				3F202EFA1BB16F7800FD1C17 /* ui-tests */,
@@ -123,6 +127,14 @@
 				3F202EFD1BB16F7800FD1C17 /* Info.plist */,
 			);
 			path = "ui-tests";
+			sourceTree = "<group>";
+		};
+		3F202F031BB178A100FD1C17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F202F041BB178CE00FD1C17 /* DropboxSDK.framework */,
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +410,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = flower/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mokagio.flower;
@@ -409,6 +425,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = flower/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mokagio.flower;
